@@ -181,7 +181,7 @@ class Program
                 // j'exécute les commandes pour créer l'application React
                 sw.WriteLine($"npx create-react-app {appName}");
                 sw.WriteLine($"cd {appName}");
-                sw.WriteLine("npm install"); // j'essaye d'installé les dépendances incluses dans le package.json dépendances à installer
+                sw.WriteLine("npm install"); // j'essaye d'installé les dépendances incluses dans le package.json
             }
         }
 
