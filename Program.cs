@@ -16,7 +16,7 @@ class Program
     private static async Task ProcessInput()
     {
         // ici j'utilise la Clé d'API OpenAI que vous nous avez donné
-        string apiKey = "";
+        string apiKey = "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";
 
         // URL de l'API Text-DaVinci-003
         string endpoint = "https://api.openai.com/v1/engines/text-davinci-003/completions";
@@ -27,7 +27,7 @@ class Program
             Console.WriteLine("Options : ");
             Console.WriteLine("c : Corriger des fautes d'orthographe.");
             Console.WriteLine("an : Traduire en anglais.");
-            Console.WriteLine("e : Traduire en espagnol.");
+            Console.WriteLine("es : Traduire en espagnol.");
             Console.WriteLine("all : Traduire en allemand.");
             Console.WriteLine("create : Créer une application React.");
             Console.WriteLine("q : Quitter.");
@@ -57,7 +57,7 @@ class Program
 
                 default:
                     // aici j' ffiche un message d'erreur en cas de choix invalide
-                    Console.WriteLine("Option non valide. Veuillez entrer 'c', 'an', 'e', 'all', 'create' ou 'q'.");
+                    Console.WriteLine("Option non valide. Veuillez entrer 'c', 'an', 'es', 'all', 'create' ou 'q'.");
                     break;
             }
         } while (true);
@@ -70,7 +70,7 @@ class Program
         {
             "c" => "corriger",
             "an" => "traduire en anglais",
-            "e" => "traduire en espagnol",
+            "es" => "traduire en espagnol",
             "all" => "traduire en allemand",
             _ => throw new InvalidOperationException("Choix non valide.")
         };
@@ -90,9 +90,9 @@ class Program
         string prompt = choice switch
         {
             "c" => $"Corrigez cette phrase sans compléter la phrase : {inputText}",
-            "an" => $"Traduisez cette phrase ou le groupe de mot exactement en anglais : {inputText}",
-            "e" => $"Traduisez cette phrase ou le groupe de mot exactement en espagnol : {inputText}",
-            "all" => $"Traduisez cette phrase ou le groupe de mot exactement en allemand : {inputText}",
+            "an" => $"Traduisez ses mots precis ou le groupe de mot exactement en anglais : {inputText}",
+            "es" => $"Traduisez ses mots precis ou le groupe de mot exactement en espagnol : {inputText}",
+            "all" => $"Traduisez ses mots precis ou le groupe de mot exactement en allemand : {inputText}",
             _ => throw new InvalidOperationException("Choix non valide.")
         };
 
@@ -182,7 +182,6 @@ class Program
                 sw.WriteLine($"npx create-react-app {appName}");
                 sw.WriteLine($"cd {appName}");
                 sw.WriteLine("npm install"); // Si vous avez d'autres dépendances à installer, ajoute les ici 
-                sw.WriteLine("npm install"); // Si vous avez d'autres dépendances à installer, ajoutez-les ici pour tester 
             }
         }
 
