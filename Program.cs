@@ -16,7 +16,7 @@ class Program
     private static async Task ProcessInput()
     {
         // ici j'utilise la Clé d'API OpenAI que vous nous avez donné
-        string apiKey = "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";
+        string apiKey = "";
 
         // URL de l'API Text-DaVinci-003
         string endpoint = "https://api.openai.com/v1/engines/text-davinci-003/completions";
