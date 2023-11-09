@@ -44,7 +44,7 @@ class Program
 
                 case "c":
                 case "an":
-                case "e":
+                case "es":
                 case "all":
                     // ici je gère la traduction ou la correction en fonction du choix
                     await HandleTranslationOrCorrection(choice, apiKey, endpoint);
