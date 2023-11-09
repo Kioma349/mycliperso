@@ -56,7 +56,7 @@ class Program
                     break;
 
                 default:
-                    // aici j' ffiche un message d'erreur en cas de choix invalide
+                    // ici j' ffiche un message d'erreur en cas de choix invalide
                     Console.WriteLine("Option non valide. Veuillez entrer 'c', 'an', 'es', 'all', 'create' ou 'q'.");
                     break;
             }
